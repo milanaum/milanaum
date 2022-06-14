@@ -1,22 +1,24 @@
-import cv2
+1.import cv2
 img=cv2.imread('dog2.jfif',0)
 cv2.imshow('image',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-import matplotlib.image as mping
+2.import matplotlib.image as mping
 import matplotlib.pyplot as plt
 img=mping.imread('dog2.jfif')
 plt.imshow(img)
+<matplotlib.image.AxesImage at 0x20d2d773e20>
 
-import cv2 from PIL import image
+
+3.import cv2 from PIL import image
 img=image open('dog2.jfif')
 img=img.rotate(180)
 img.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-from PIL import ImageColor
+4.from PIL import ImageColor
 img1=ImageColor.getrgb("yellow")
 print(img1)
 img2=ImageColor.getrgb("red")
@@ -24,11 +26,11 @@ print(img2)
 img3=ImageColor.getrgb("green")
 print(img3)
 
-from PIL import Image
+5.from PIL import Image
 img=Image.new('RGB',(200,400),(0,128,0))
 img.show()
 
-import cv2
+6.import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 img=cv2.imread('dog2.jfif')
@@ -40,7 +42,7 @@ img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
 plt.show()
 
 
-from PIL import Image
+7.from PIL import Image
 image=Image.open('dog2.jfif')
 print("Filename:",image.filename)
 print("Format:",image.format)
