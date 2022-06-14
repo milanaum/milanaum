@@ -1,86 +1,54 @@
-- 👋 Hi, I’m @milanaum
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+import cv2
+img=cv2.imread('dog2.jfif',0)
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
-<!---
-milanaum/milanaum is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-// C++ program to illustrate the array
-// of Linked Lists
-#include <iostream>
-using namespace std;
-  
-// Structure of Linked Lists
-struct info {
-    int data;
-    info* next;
-};
-  
-// Driver Code
-int main()
-{
-    int size = 10;
-  
-    // Pointer To Pointer Array
-    info** head;
-  
-    // Array of pointers to info struct
-    // of size
-    head = new info*[size];
-  
-    // Initialize pointer array to NULL
-    for (int i = 0; i < size; ++i) {
-        *(head + i) = NULL;
-    }
-  
-    // Traverse the pointer array
-    for (int i = 0; i < size; ++i) {
-  
-        // To track last node of the list
-        info* prev = NULL;
-  
-        // Randomly taking 4 nodes in each
-        // linked list
-        int s = 4;
-  
-        while (s--) {
-  
-            // Create a new node
-            info* n = new info;
-  
-            // Input the random data
-            n->data = i * s;
-            n->next = NULL;
-  
-            // If the node is first
-            if (*(head + i) == NULL) {
-                *(head + i) = n;
-            }
-            else {
-                prev->next = n;
-            }
-            prev = n;
-        }
-    }
-  
-    // Print the array of linked list
-    for (int i = 0; i < size; ++i) {
-        info* temp = *(head + i);
-  
-        // Linked list number
-        cout << i << "-->\t";
-  
-        // Print the Linked List
-        while (temp != NULL) {
-            cout << temp->data << " ";
-            temp = temp->next;
-        }
-  
-        cout << '\n';
-    }
-  
-    return 0;
-}
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+img=mping.imread('dog2.jfif')
+plt.imshow(img)
+
+import cv2 from PIL import image
+img=image open('dog2.jfif')
+img=img.rotate(180)
+img.show()
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+from PIL import ImageColor
+img1=ImageColor.getrgb("yellow")
+print(img1)
+img2=ImageColor.getrgb("red")
+print(img2)
+img3=ImageColor.getrgb("green")
+print(img3)
+
+from PIL import Image
+img=Image.new('RGB',(200,400),(0,128,0))
+img.show()
+
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread('dog2.jfif')
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RG)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+plt.show()
+
+
+from PIL import Image
+image=Image.open('dog2.jfif')
+print("Filename:",image.filename)
+print("Format:",image.format)
+print("Mode:",image.mode)
+print("Size:",image.size)
+print("Width:",image.width)
+print("Height:",image.height)
+image.close()
+
+
+
